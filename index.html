@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./styles/style.css" rel="stylesheet">
+    <script src="./index.js" type="module"></script>
+    <title>Document</title>
+</head>
+<body>
+<div style="padding:1em;">
+    <ul id="menu" class="menu">
+        <li><a id="page-about" href="#">Om Denne Opgave</a></li>
+        <li><a id="page-bikeriders" href="#">Bike riders</a></li>
+        <li><a id="page-add-bikeriders" href="#">Add bike Rider</a></li>
+        <li><a id="page-parties" href="#">Bike Teams</a></li>
+    </ul>
+</div>
+<div id="content" style="margin-left:15px;padding-top: 1em;"></div>
+</div>
+
+</body>
+</html>
+
+<template data-id="page-about">
+    <h3>Denne side indeholder frontend delen af sommer eksamensopgaven til datamatikerne i 2022</>
+    <h3>Siden indeholder crud metoder for en bikeRider</h3>
+</template>
+
+<template data-id="page-bikeriders">
+    <h2>Candidates</h2>
+    <p>Click the button to sort the table alphabetically, by name:</p>
+    <p><button type="button" id="btn-sort">Sort</button></p>
+    <table id="table-bikerider-data" class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Time In Minutes</th>
+            <th>Mountain Points</th>
+            <th>Sprint Points</th>
+            <th>Bike Team Name</th>
+            <th>Bike Team Name</th>
+        </tr>
+        </thead>
+        <tbody id="tbl-body">
+
+        </tbody>
+
+    </table>
+
+</template>
+
+<template data-id="page-add-bikeriders">
+    <div class="d-flex align-items-center" style="height: 80vh;">
+        <div class="bg-light px-4 py-2 mx-auto text-center border" style="min-width: 30vw;">
+            <h3 class="mb-3">Enter the details of a bike rider</h3>
+            <form>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" value="tester1">
+                <label for="name">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="age" value="22">
+                <label for="age">Age</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="mountain-points" value="2">
+                <label for="mountain-points">Mountain points</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="sprint-points" value="2">
+                <label for="sprint-points">Sprint points</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="time-in-minutes" value="2">
+                <label for="time-in-minutes">Sprint points</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="bike-team-name" value="tester1">
+                <label for="bike-team-name">Bike Team Name</label>
+            </div>
+            <div>
+                <p id="bikerider-info-all"></p>
+                <button class="btn btn-primary" type="submit" id="btn-make-bikerider">Create</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</template>
