@@ -3,11 +3,11 @@ import {handleHttpErrors} from "../../fetchUtils.js";
 import {makeOptions} from "../../fetchUtils.js";
 
 export async function addBikeRiderHandler() {
-    document.getElementById("btn-add-bikerider").onclick = addBikeRider
+    document.getElementById("btn-make-bikerider").onclick = addBikeRider
 }
 
 function addBikeRider() {
-    const bikeRider = {}
+    let bikeRider = {}
     console.log("Called addBikeRider")
     bikeRider.name = document.getElementById("name").value
     bikeRider.age = document.getElementById("age").value
@@ -17,7 +17,7 @@ function addBikeRider() {
     bikeRider.bikeTeamName = document.getElementById("bike-team-name").value
 
 
-    const options = makeOptions("post", bikeRider)
+    const options = makeOptions("POST", bikeRider)
     fetch(URL + "/bikeRiders",options).then(res => handleHttpErrors(res))
         .then(res => res.json())
         .then(bikeRider => {

@@ -14,7 +14,7 @@ function renderMenuItems(evt) {
             sortBikeRidersHandler()
             break
         }
-        case "add-bikeRider": {
+        case "page-add-bikeriders": {
             addBikeRiderHandler()
             break
         }

@@ -15,13 +15,20 @@ export async function getBikeRiders() {
           <td>${c.mountainPoints}</td>
           <td>${c.sprintPoints}</td>
           <td>${c.bikeTeamName}</td>
+          <td><button id="delete-${c.id}">delete</button></td>
         </tr>
      `).join("")
         document.getElementById("tbl-body").innerHTML = rows
-
+        document.getElementById("tbl-body").onclick=del
     } catch(err){
         console.log(err.message)
     }
+
+}
+function del(evt){
+    const id = evt.target.id
+    fetch("").then()
+    alert(id)
 
 }
 
