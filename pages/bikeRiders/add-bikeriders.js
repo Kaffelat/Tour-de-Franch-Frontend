@@ -18,7 +18,7 @@ function addBikeRider() {
 
 
     const options = makeOptions("POST", bikeRider)
-    fetch(URL + "api/bikeRiders",options).then(res => handleHttpErrors(res))
+    fetch(URL + "/bikeRiders",options).then(res => handleHttpErrors(res))
         .then(res => res.json())
         .then(bikeRider => {
             document.getElementById("bikerider-info-all").innerText = "new Bike Rider was created" + JSON.stringify(bikeRider.name)

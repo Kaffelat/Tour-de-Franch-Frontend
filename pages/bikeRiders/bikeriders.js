@@ -1,6 +1,6 @@
 import {URL} from "../../settings.js"
 import {handleHttpErrors} from "../../fetchUtils.js";
-const bikeRiderURL = URL+"api/bikeRiders"
+const bikeRiderURL = URL+"/bikeRiders"
 
 export async function getBikeRiders() {
     try{
